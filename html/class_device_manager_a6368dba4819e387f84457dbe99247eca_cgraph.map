@@ -1,0 +1,5 @@
+<map id="DeviceManager::operator=" name="DeviceManager::operator=">
+<area shape="rect" id="Node000001" title="Assignment operator (shallow copy)." alt="" coords="5,5,181,32"/>
+<area shape="rect" id="Node000002" href="$class_device_manager.html#ae744719d7e77d792f9bb0c6d6b47ca69" title="Constructs a DeviceManager with fixed capacity." alt="" coords="229,5,440,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,16,216,19,210,19,181,21"/>
+</map>

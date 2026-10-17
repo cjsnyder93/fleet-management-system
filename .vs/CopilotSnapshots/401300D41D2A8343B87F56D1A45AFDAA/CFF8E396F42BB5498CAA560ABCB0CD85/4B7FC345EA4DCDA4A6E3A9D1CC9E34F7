@@ -1,0 +1,131 @@
+﻿#include "DeviceManager.h"
+
+// =======================
+// Device
+// =======================
+Device::Device(string id, DeviceType type)
+    : id(id), type(type), active(true) {}
+
+string Device::getID() { return id; }
+DeviceType Device::getType() { return type; }
+bool Device::isActive() { return active; }
+void Device::setActive(bool state) { active = state; }
+
+bool Device::operator==(const Device& other) const {
+    return this->id == other.id;
+}
+
+
+void Device::print(ostream& out) const {
+
+    out << "ID: " << id
+        << ", Type: " << (type == SENSOR ? "SENSOR" : "ACTUATOR")
+        << ", Active: " << (active ? "true" : "false");
+}
+
+Device::~Device() {}
+
+ostream& operator<<(ostream& out, const Device& d) {
+    d.print(out);
+    return out;
+}
+
+// =======================
+// Sensor
+// =======================
+Sensor::Sensor(string id, double threshold)
+    : Device(id, SENSOR), currentReading(0.0), threshold(threshold) {}
+
+void Sensor::setReading(double value) { currentReading = value; }
+double Sensor::getReading() { return currentReading; }
+
+bool Sensor::isOverThreshold() {
+    return currentReading > threshold;
+}
+
+Sensor::~Sensor() {}
+
+// =======================
+// Actuator
+// =======================
+Actuator::Actuator(string id, double maxOutput)
+    : Device(id, ACTUATOR), outputLevel(0.0), maxOutput(maxOutput) {}
+
+void Actuator::setOutput(double level) {
+    if (level > maxOutput)
+        outputLevel = maxOutput;
+    else
+        outputLevel = level;
+}
+
+double Actuator::getOutput() { return outputLevel; }
+
+Actuator& Actuator::operator+=(double delta) {
+    outputLevel += delta;
+    if (outputLevel > maxOutput)
+        outputLevel = maxOutput;
+    return *this;
+}
+
+Actuator::~Actuator() {}
+
+// =======================
+// DeviceManager
+// =======================
+DeviceManager::DeviceManager(int cap)
+    : capacity(cap), count(0)
+{
+    devices = new Device * [cap];
+}
+
+DeviceManager::DeviceManager(DeviceManager& other)
+    : capacity(other.capacity), count(other.count)
+{
+    devices = new Device * [capacity];
+    for (int i = 0; i < count; i++)
+        devices[i] = other.devices[i];
+}
+
+DeviceManager DeviceManager::operator=(DeviceManager& other) {
+    if (this == &other) return *this;
+
+    for (int i = 0; i < count; i++) {
+        if (devices[i]->getType() == SENSOR)
+            delete static_cast<Sensor*>(devices[i]);
+        else
+            delete static_cast<Actuator*>(devices[i]);
+    }
+    delete[] devices;
+
+    capacity = other.capacity;
+    count = other.count;
+
+    devices = new Device * [capacity];
+    for (int i = 0; i < count; i++)
+        devices[i] = other.devices[i];
+
+    return *this;
+}
+
+void DeviceManager::addDevice(Device* d) {
+    if (count < capacity) {
+        devices[count] = d;
+        count++;
+    }
+}
+
+Device* DeviceManager::getDevice(int index) {
+    return devices[index];
+}
+
+int DeviceManager::getCount() { return count; }
+
+DeviceManager::~DeviceManager() {
+    for (int i = 0; i < count; i++) {
+        if (devices[i]->getType() == SENSOR)
+            delete static_cast<Sensor*>(devices[i]);
+        else
+            delete static_cast<Actuator*>(devices[i]);
+    }
+    delete[] devices;
+}

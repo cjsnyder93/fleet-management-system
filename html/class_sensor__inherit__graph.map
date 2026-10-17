@@ -1,0 +1,5 @@
+<map id="Sensor" name="Sensor">
+<area shape="rect" id="Node000001" title="Represents a sensor with a reading and threshold." alt="" coords="5,379,165,587"/>
+<area shape="rect" id="Node000002" href="$class_device.html" title="Base class for Sensor and Actuator." alt="" coords="10,5,161,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,343,88,379,83,379,85,348"/>
+</map>

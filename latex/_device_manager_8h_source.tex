@@ -1,0 +1,97 @@
+\doxysection{Device\+Manager.\+h}
+\hypertarget{_device_manager_8h_source}{}\label{_device_manager_8h_source}\doxymbox{\hyperlink{_device_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEVICEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEVICEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \{\ \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9a6d497d39379053324114e5611323b558}{SENSOR}},\ \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9a69212010f56a65da58b3869d43701910}{ACTUATOR}}\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_device_a157555eda7bcf277b286458011604dd7}{id}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \doxymbox{\hyperlink{class_device_a7fc5d16455b81b1f20fe14725ee1d704}{type}};\ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}}(\textcolor{keywordtype}{string}\ \textcolor{keywordtype}{id},\ \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \doxymbox{\hyperlink{class_device_a7fc5d16455b81b1f20fe14725ee1d704}{type}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_device_a9a032153593e74d6916dc7c09a9cafbb}{getID}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \doxymbox{\hyperlink{class_device_ad1889e61913a6816b9783894c3f46bfb}{getType}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_device_a6b2f2b45d71f1ecda445896e0429e22c}{isActive}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_device_af6456cd57ee231fc23b894096ba93e19}{setActive}}(\textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_device_aacf5bdd68e49994907b79f362e6c9245}{operator==}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_device_af771e75cb32cbc38ae8f3dd73a2995d0}{print}}(ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{\string~Device}}();}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ ostream\&\ \doxymbox{\hyperlink{_device_manager_8cpp_a3c934878877d84aafdac6f937256a853}{operator<<}}(ostream\&\ out,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_device}{Device}}\&\ d);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_sensor_a4ab188af9a1ee8993264fdbc658d393e}{Sensor}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}}\ \{}
+\DoxyCodeLine{00095\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensor_a98e9e79e82d8bb065d027ecb54cd9ae6}{currentReading}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensor_ad5633e190af3b9d37c7ff5cf7e999828}{threshold}};\ \ \ \ \ \ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00105\ \ \ \ \ \doxymbox{\hyperlink{class_sensor_a4ab188af9a1ee8993264fdbc658d393e}{Sensor}}(\textcolor{keywordtype}{string}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensor_ad5633e190af3b9d37c7ff5cf7e999828}{threshold}});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sensor_a71380b19f5d24a8e136e903fd96e3a6d}{setReading}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sensor_a9dec51bcaa0be7a1f39fa3315966afd9}{getReading}}();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_sensor_a40a87102f936e37d1bb68b72be612b45}{isOverThreshold}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \doxymbox{\hyperlink{class_sensor_a4ab188af9a1ee8993264fdbc658d393e}{\string~Sensor}}();}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_actuator_a7272cffc26026c1ac91696d746f651f0}{Actuator}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}}\ \{}
+\DoxyCodeLine{00136\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_actuator_a6988f3d46eb5ccc641d22ebfe42698fc}{outputLevel}};\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_actuator_a94d72127aa6f9ac6e86cae500705e308}{maxOutput}};\ \ \ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00146\ \ \ \ \ \doxymbox{\hyperlink{class_actuator_a7272cffc26026c1ac91696d746f651f0}{Actuator}}(\textcolor{keywordtype}{string}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_actuator_a94d72127aa6f9ac6e86cae500705e308}{maxOutput}});}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_actuator_a8ba8665604eee38fe227fa765c5b1a1e}{setOutput}}(\textcolor{keywordtype}{double}\ level);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_actuator_a2d81d034c15685b052085b7a222cece5}{getOutput}}();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00165\ \ \ \ \ \doxymbox{\hyperlink{class_actuator_a7272cffc26026c1ac91696d746f651f0}{Actuator}}\&\ \doxymbox{\hyperlink{class_actuator_ae1cee4237d861d187c2bb33a79f680a4}{operator+=}}(\textcolor{keywordtype}{double}\ delta);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ \doxymbox{\hyperlink{class_actuator_a7272cffc26026c1ac91696d746f651f0}{\string~Actuator}}();}
+\DoxyCodeLine{00171\ \};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{DeviceManager}}\ \{}
+\DoxyCodeLine{00181\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00182\ \ \ \ \ \doxymbox{\hyperlink{class_device}{Device}}**\ \doxymbox{\hyperlink{class_device_manager_a9cd063e40f98aacbd97811f25fde2068}{devices}};\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_device_manager_a56d4e890e7bcfde2d711b3c70c429f36}{count}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_device_manager_ad6508f160d8abe64b2d4a6d05d4a9651}{capacity}};\ \ \ \ \ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00191\ \ \ \ \ \doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{DeviceManager}}(\textcolor{keywordtype}{int}\ cap);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00197\ \ \ \ \ \doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{DeviceManager}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{DeviceManager}}\&\ other);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00204\ \ \ \ \ \doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{DeviceManager}}\&\ \doxymbox{\hyperlink{class_device_manager_a6368dba4819e387f84457dbe99247eca}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{DeviceManager}}\&\ other);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_device_manager_ac4ec66d2b858c50f5b83b50ac9917cdc}{addDevice}}(\doxymbox{\hyperlink{class_device}{Device}}*\ d);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00217\ \ \ \ \ \doxymbox{\hyperlink{class_device}{Device}}*\ \doxymbox{\hyperlink{class_device_manager_a753cdd4f555a9b7238f814a99dab166f}{getDevice}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_device_manager_ae2945426af19d4315c033756e052f148}{getCount}}();}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00231\ \ \ \ \ \doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{\string~DeviceManager}}();}
+\DoxyCodeLine{00232\ \};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

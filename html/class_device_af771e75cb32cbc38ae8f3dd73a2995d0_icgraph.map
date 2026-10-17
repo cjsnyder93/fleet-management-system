@@ -1,0 +1,6 @@
+<map id="Device::print" name="Device::print">
+<area shape="rect" id="Node000001" title="Prints ID, type, and active status." alt="" coords="138,29,233,56"/>
+<area shape="rect" id="Node000002" href="$_device_manager_8cpp.html#a3c934878877d84aafdac6f937256a853" title="Stream output operator for Device." alt="" coords="5,29,90,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,43,90,45,90,40,125,42"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="69,14,62,10,47,8,34,10,26,14,24,20,28,29,23,29,19,21,22,11,32,5,48,3,64,5,75,14"/>
+</map>

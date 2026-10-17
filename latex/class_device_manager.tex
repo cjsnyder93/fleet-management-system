@@ -1,0 +1,248 @@
+\doxysection{Device\+Manager Class Reference}
+\hypertarget{class_device_manager}{}\label{class_device_manager}\index{DeviceManager@{DeviceManager}}
+
+
+Manages a dynamically allocated array of \doxylink{class_device}{Device} pointers.  
+
+
+
+
+{\ttfamily \+\#include $<$Device\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Device\+Manager:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_device_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}{Device\+Manager}} (int cap)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device_manager}{Device\+Manager} with fixed capacity. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_device_manager_afcb2eb800541c007bb1b5a593b04f76c}{Device\+Manager}} (const \doxymbox{\hyperlink{class_device_manager}{Device\+Manager}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor (shallow copy). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_device_manager}{Device\+Manager}} \& \doxymbox{\hyperlink{class_device_manager_a6368dba4819e387f84457dbe99247eca}{operator=}} (const \doxymbox{\hyperlink{class_device_manager}{Device\+Manager}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator (shallow copy). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_device_manager_ac4ec66d2b858c50f5b83b50ac9917cdc}{add\+Device}} (\doxymbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}d)
+\begin{DoxyCompactList}\small\item\em Adds a device if capacity allows. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_device_manager_a753cdd4f555a9b7238f814a99dab166f}{get\+Device}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns device pointer at index. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_device_manager_ae2945426af19d4315c033756e052f148}{get\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Returns number of stored devices. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_device_manager_ad91a247c8acfd51c533be52313ce7ddd}{\texorpdfstring{$\sim$}{\string~}\+Device\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_device_manager_a9cd063e40f98aacbd97811f25fde2068}{devices}}
+\begin{DoxyCompactList}\small\item\em Array of \doxylink{class_device}{Device} pointers. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_device_manager_a56d4e890e7bcfde2d711b3c70c429f36}{count}}
+\begin{DoxyCompactList}\small\item\em Number of devices stored. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_device_manager_ad6508f160d8abe64b2d4a6d05d4a9651}{capacity}}
+\begin{DoxyCompactList}\small\item\em Maximum number of devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a dynamically allocated array of \doxylink{class_device}{Device} pointers. 
+
+No STL allowed (reminder). Uses type-\/tag downcasting to delete correct derived type. 
+
+\label{class_device_manager_doc-constructors}
+\Hypertarget{class_device_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69}\index{DeviceManager@{DeviceManager}!DeviceManager@{DeviceManager}}
+\index{DeviceManager@{DeviceManager}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{DeviceManager()}{DeviceManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69} 
+Device\+Manager::\+\+Device\+Manager (\begin{DoxyParamCaption}\item[{int}]{cap}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_device_manager}{Device\+Manager} with fixed capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cap} & Maximum number of devices\\
+\hline
+\end{DoxyParams}
+Ensures capacity is at least 1 to avoid zero-\/sized allocations. Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_manager_ae744719d7e77d792f9bb0c6d6b47ca69_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_manager_afcb2eb800541c007bb1b5a593b04f76c}\index{DeviceManager@{DeviceManager}!DeviceManager@{DeviceManager}}
+\index{DeviceManager@{DeviceManager}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{DeviceManager()}{DeviceManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_device_manager_afcb2eb800541c007bb1b5a593b04f76c} 
+Device\+Manager::\+\+Device\+Manager (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_device_manager}{Device\+Manager}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor (shallow copy). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_device_manager}{Device\+Manager} to copy\\
+\hline
+\end{DoxyParams}
+Copies pointers only; does not clone devices. Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_manager_afcb2eb800541c007bb1b5a593b04f76c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_manager_ad91a247c8acfd51c533be52313ce7ddd}\index{DeviceManager@{DeviceManager}!````~DeviceManager@{\texorpdfstring{$\sim$}{\string~}DeviceManager}}
+\index{````~DeviceManager@{\texorpdfstring{$\sim$}{\string~}DeviceManager}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DeviceManager()}{\string~DeviceManager()}}
+{\footnotesize\ttfamily \label{class_device_manager_ad91a247c8acfd51c533be52313ce7ddd} 
+Device\+Manager::\+\texorpdfstring{$\sim$}{\string~}\+Device\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Deletes each stored device using type-\/tag downcasting, then deletes the array itself. 
+
+\label{class_device_manager_doc-func-members}
+\Hypertarget{class_device_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_device_manager_ac4ec66d2b858c50f5b83b50ac9917cdc}\index{DeviceManager@{DeviceManager}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily \label{class_device_manager_ac4ec66d2b858c50f5b83b50ac9917cdc} 
+void Device\+Manager::\+add\+Device (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}}]{d}{}\end{DoxyParamCaption})}
+
+
+
+Adds a device if capacity allows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Pointer to \doxylink{class_device}{Device} (\doxylink{class_sensor}{Sensor} or \doxylink{class_actuator}{Actuator}) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_device_manager_ac4ec66d2b858c50f5b83b50ac9917cdc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_manager_ae2945426af19d4315c033756e052f148}\index{DeviceManager@{DeviceManager}!getCount@{getCount}}
+\index{getCount@{getCount}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily \label{class_device_manager_ae2945426af19d4315c033756e052f148} 
+int Device\+Manager::\+get\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns number of stored devices. 
+
+\begin{DoxyReturn}{Returns}
+Count of devices 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{class_device_manager_ae2945426af19d4315c033756e052f148_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_manager_a753cdd4f555a9b7238f814a99dab166f}\index{DeviceManager@{DeviceManager}!getDevice@{getDevice}}
+\index{getDevice@{getDevice}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{getDevice()}{getDevice()}}
+{\footnotesize\ttfamily \label{class_device_manager_a753cdd4f555a9b7238f814a99dab166f} 
+\doxymbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*} Device\+Manager::\+get\+Device (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Returns device pointer at index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Valid index (caller guarantees correctness) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_device}{Device} pointer 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_device_manager_a753cdd4f555a9b7238f814a99dab166f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_manager_a6368dba4819e387f84457dbe99247eca}\index{DeviceManager@{DeviceManager}!operator=@{operator=}}
+\index{operator=@{operator=}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_device_manager_a6368dba4819e387f84457dbe99247eca} 
+\doxymbox{\hyperlink{class_device_manager}{Device\+Manager}} \& Device\+Manager::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_device_manager}{Device\+Manager}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Assignment operator (shallow copy). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_device_manager}{Device\+Manager} to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this \doxylink{class_device_manager}{Device\+Manager}
+\end{DoxyReturn}
+Deletes owned devices, then copies pointers from other. Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_manager_a6368dba4819e387f84457dbe99247eca_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_device_manager_doc-variable-members}
+\Hypertarget{class_device_manager_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_device_manager_ad6508f160d8abe64b2d4a6d05d4a9651}\index{DeviceManager@{DeviceManager}!capacity@{capacity}}
+\index{capacity@{capacity}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily \label{class_device_manager_ad6508f160d8abe64b2d4a6d05d4a9651} 
+int Device\+Manager::\+capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maximum number of devices. 
+
+\Hypertarget{class_device_manager_a56d4e890e7bcfde2d711b3c70c429f36}\index{DeviceManager@{DeviceManager}!count@{count}}
+\index{count@{count}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{class_device_manager_a56d4e890e7bcfde2d711b3c70c429f36} 
+int Device\+Manager::\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of devices stored. 
+
+\Hypertarget{class_device_manager_a9cd063e40f98aacbd97811f25fde2068}\index{DeviceManager@{DeviceManager}!devices@{devices}}
+\index{devices@{devices}!DeviceManager@{DeviceManager}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily \label{class_device_manager_a9cd063e40f98aacbd97811f25fde2068} 
+\doxymbox{\hyperlink{class_device}{Device}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Device\+Manager::\+devices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array of \doxylink{class_device}{Device} pointers. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_device_manager_8h}{Device\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_device_manager_8cpp}{Device\+Manager.\+cpp}}\end{DoxyCompactItemize}

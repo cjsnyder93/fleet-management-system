@@ -1,0 +1,95 @@
+﻿#ifndef DEVICEMANAGER_H
+#define DEVICEMANAGER_H
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+enum DeviceType { SENSOR, ACTUATOR };
+
+// =======================
+// Device (Base Class)
+// =======================
+class Device {
+protected:
+    string id;
+    DeviceType type;
+    bool active;
+
+public:
+    Device(string id, DeviceType type);
+
+    string getID();
+    DeviceType getType();
+    bool isActive();
+    void setActive(bool state);
+
+    bool operator==(const Device& other) const;
+
+
+    void print(ostream& out) const;
+
+
+    ~Device();
+};
+
+ostream& operator<<(ostream& out, const Device& d);
+
+// =======================
+// Sensor
+// =======================
+class Sensor : public Device {
+private:
+    double currentReading;
+    double threshold;
+
+public:
+    Sensor(string id, double threshold);
+
+    void setReading(double value);
+    double getReading();
+    bool isOverThreshold();
+
+    ~Sensor();
+};
+
+// =======================
+// Actuator
+// =======================
+class Actuator : public Device {
+private:
+    double outputLevel;
+    double maxOutput;
+
+public:
+    Actuator(string id, double maxOutput);
+
+    void setOutput(double level);
+    double getOutput();
+    Actuator& operator+=(double delta);
+
+    ~Actuator();
+};
+
+// =======================
+// DeviceManager
+// =======================
+class DeviceManager {
+private:
+    Device** devices;
+    int count;
+    int capacity;
+
+public:
+    DeviceManager(int cap);
+    DeviceManager(DeviceManager& other);
+    DeviceManager operator=(DeviceManager& other);
+
+    void addDevice(Device* d);
+    Device* getDevice(int index);
+    int getCount();
+
+    ~DeviceManager();
+};
+
+#endif

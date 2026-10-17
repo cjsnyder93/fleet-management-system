@@ -1,0 +1,5 @@
+<map id="Device::operator==" name="Device::operator==">
+<area shape="rect" id="Node000001" title="Compares devices by ID." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="Node000002" href="$class_device.html#a5d43ac1b964e8ad1c1c0a423ba6daf81" title="Constructs a Device with ID and type." alt="" coords="187,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,16,174,18,168,19,139,21"/>
+</map>

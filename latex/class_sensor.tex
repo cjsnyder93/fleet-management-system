@@ -1,0 +1,220 @@
+\doxysection{Sensor Class Reference}
+\hypertarget{class_sensor}{}\label{class_sensor}\index{Sensor@{Sensor}}
+
+
+Represents a sensor with a reading and threshold.  
+
+
+
+
+{\ttfamily \+\#include $<$Device\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Sensor:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_sensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sensor:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_sensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_sensor_a4ab188af9a1ee8993264fdbc658d393e}{Sensor}} (string id, double threshold)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_sensor}{Sensor}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sensor_a71380b19f5d24a8e136e903fd96e3a6d}{set\+Reading}} (double value)
+\begin{DoxyCompactList}\small\item\em Sets the current reading. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_sensor_a9dec51bcaa0be7a1f39fa3315966afd9}{get\+Reading}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current reading. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_sensor_a40a87102f936e37d1bb68b72be612b45}{is\+Over\+Threshold}} ()
+\begin{DoxyCompactList}\small\item\em Checks if reading exceeds threshold. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_sensor_aee8c70e7ef05ce65e7ee33686b5d7db2}{\texorpdfstring{$\sim$}{\string~}\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor (does nothing). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}} (string id, \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} with ID and type. \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_device_a9a032153593e74d6916dc7c09a9cafbb}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Returns the device ID. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} \doxymbox{\hyperlink{class_device_ad1889e61913a6816b9783894c3f46bfb}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the device type tag. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_device_a6b2f2b45d71f1ecda445896e0429e22c}{is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the device is active. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_device_af6456cd57ee231fc23b894096ba93e19}{set\+Active}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the active state. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_device_aacf5bdd68e49994907b79f362e6c9245}{operator==}} (const \doxymbox{\hyperlink{class_device}{Device}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares devices by ID. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_device_af771e75cb32cbc38ae8f3dd73a2995d0}{print}} (ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Prints ID, type, and active status. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_device_a9dabc419c8d8df3a686c33ce042bc99a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Destructor (does nothing). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_sensor_a98e9e79e82d8bb065d027ecb54cd9ae6}{current\+Reading}}
+\begin{DoxyCompactList}\small\item\em Most recent reading (starts at 0.\+0). \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_sensor_ad5633e190af3b9d37c7ff5cf7e999828}{threshold}}
+\begin{DoxyCompactList}\small\item\em Threshold value set in constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_device_a157555eda7bcf277b286458011604dd7}{id}}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} \doxymbox{\hyperlink{class_device_a7fc5d16455b81b1f20fe14725ee1d704}{type}}
+\begin{DoxyCompactList}\small\item\em Type tag: SENSOR or ACTUATOR. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em Whether the device is currently active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a sensor with a reading and threshold. 
+
+\label{class_sensor_doc-constructors}
+\Hypertarget{class_sensor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sensor_a4ab188af9a1ee8993264fdbc658d393e}\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily \label{class_sensor_a4ab188af9a1ee8993264fdbc658d393e} 
+Sensor::\+\+Sensor (\begin{DoxyParamCaption}\item[{string}]{id}{, }\item[{double}]{threshold}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_sensor}{Sensor}. 
+
+Constructs a \doxylink{class_sensor}{Sensor} with ID and threshold.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier \\
+\hline
+{\em threshold} & Threshold value \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{class_sensor_a4ab188af9a1ee8993264fdbc658d393e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{class_sensor_a4ab188af9a1ee8993264fdbc658d393e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_sensor_aee8c70e7ef05ce65e7ee33686b5d7db2}\index{Sensor@{Sensor}!````~Sensor@{\texorpdfstring{$\sim$}{\string~}Sensor}}
+\index{````~Sensor@{\texorpdfstring{$\sim$}{\string~}Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sensor()}{\string~Sensor()}}
+{\footnotesize\ttfamily \label{class_sensor_aee8c70e7ef05ce65e7ee33686b5d7db2} 
+Sensor::\+\texorpdfstring{$\sim$}{\string~}\+Sensor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor (does nothing). 
+
+\doxylink{class_sensor}{Sensor} destructor (does nothing). 
+
+\label{class_sensor_doc-func-members}
+\Hypertarget{class_sensor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sensor_a9dec51bcaa0be7a1f39fa3315966afd9}\index{Sensor@{Sensor}!getReading@{getReading}}
+\index{getReading@{getReading}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getReading()}{getReading()}}
+{\footnotesize\ttfamily \label{class_sensor_a9dec51bcaa0be7a1f39fa3315966afd9} 
+double Sensor::\+get\+Reading (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current reading. 
+
+\begin{DoxyReturn}{Returns}
+Current reading value 
+\end{DoxyReturn}
+\Hypertarget{class_sensor_a40a87102f936e37d1bb68b72be612b45}\index{Sensor@{Sensor}!isOverThreshold@{isOverThreshold}}
+\index{isOverThreshold@{isOverThreshold}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{isOverThreshold()}{isOverThreshold()}}
+{\footnotesize\ttfamily \label{class_sensor_a40a87102f936e37d1bb68b72be612b45} 
+bool Sensor::\+is\+Over\+Threshold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if reading exceeds threshold. 
+
+\begin{DoxyReturn}{Returns}
+true if current\+Reading \texorpdfstring{$>$}{>} threshold 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_sensor_a40a87102f936e37d1bb68b72be612b45_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_sensor_a71380b19f5d24a8e136e903fd96e3a6d}\index{Sensor@{Sensor}!setReading@{setReading}}
+\index{setReading@{setReading}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{setReading()}{setReading()}}
+{\footnotesize\ttfamily \label{class_sensor_a71380b19f5d24a8e136e903fd96e3a6d} 
+void Sensor::\+set\+Reading (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New reading value \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{class_sensor_a71380b19f5d24a8e136e903fd96e3a6d_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_sensor_doc-variable-members}
+\Hypertarget{class_sensor_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_sensor_a98e9e79e82d8bb065d027ecb54cd9ae6}\index{Sensor@{Sensor}!currentReading@{currentReading}}
+\index{currentReading@{currentReading}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{currentReading}{currentReading}}
+{\footnotesize\ttfamily \label{class_sensor_a98e9e79e82d8bb065d027ecb54cd9ae6} 
+double Sensor::\+current\+Reading\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Most recent reading (starts at 0.\+0). 
+
+\Hypertarget{class_sensor_ad5633e190af3b9d37c7ff5cf7e999828}\index{Sensor@{Sensor}!threshold@{threshold}}
+\index{threshold@{threshold}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily \label{class_sensor_ad5633e190af3b9d37c7ff5cf7e999828} 
+double Sensor::\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Threshold value set in constructor. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_device_manager_8h}{Device\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_device_manager_8cpp}{Device\+Manager.\+cpp}}\end{DoxyCompactItemize}

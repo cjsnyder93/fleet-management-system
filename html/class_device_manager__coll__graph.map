@@ -1,0 +1,5 @@
+<map id="DeviceManager" name="DeviceManager">
+<area shape="rect" id="Node000001" title="Manages a dynamically allocated array of Device pointers." alt="" coords="5,403,214,669"/>
+<area shape="rect" id="Node000002" href="$class_device.html" title="Base class for Sensor and Actuator." alt="" coords="34,5,185,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,328,112,386,107,385,109,333"/>
+</map>

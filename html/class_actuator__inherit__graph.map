@@ -1,0 +1,5 @@
+<map id="Actuator" name="Actuator">
+<area shape="rect" id="Node000001" title="Represents an actuator with output clamped to a maximum." alt="" coords="5,379,156,603"/>
+<area shape="rect" id="Node000002" href="$class_device.html" title="Base class for Sensor and Actuator." alt="" coords="5,5,156,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,343,83,379,78,379,80,348"/>
+</map>

@@ -1,0 +1,255 @@
+\doxysection{Device Class Reference}
+\hypertarget{class_device}{}\label{class_device}\index{Device@{Device}}
+
+
+Base class for \doxylink{class_sensor}{Sensor} and \doxylink{class_actuator}{Actuator}.  
+
+
+
+
+{\ttfamily \+\#include $<$Device\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Device:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_device__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Device:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_device__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}{Device}} (string id, \doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} with ID and type. \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_device_a9a032153593e74d6916dc7c09a9cafbb}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Returns the device ID. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} \doxymbox{\hyperlink{class_device_ad1889e61913a6816b9783894c3f46bfb}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the device type tag. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_device_a6b2f2b45d71f1ecda445896e0429e22c}{is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the device is active. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_device_af6456cd57ee231fc23b894096ba93e19}{set\+Active}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the active state. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_device_aacf5bdd68e49994907b79f362e6c9245}{operator==}} (const \doxymbox{\hyperlink{class_device}{Device}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares devices by ID. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_device_af771e75cb32cbc38ae8f3dd73a2995d0}{print}} (ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Prints ID, type, and active status. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_device_a9dabc419c8d8df3a686c33ce042bc99a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Destructor (does nothing). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_device_a157555eda7bcf277b286458011604dd7}{id}}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} \doxymbox{\hyperlink{class_device_a7fc5d16455b81b1f20fe14725ee1d704}{type}}
+\begin{DoxyCompactList}\small\item\em Type tag: SENSOR or ACTUATOR. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em Whether the device is currently active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for \doxylink{class_sensor}{Sensor} and \doxylink{class_actuator}{Actuator}. 
+
+Stores ID, type tag, and active status. No virtual functions allowed (reminder). Members are protected so derived classes can access them directly. 
+
+\label{class_device_doc-constructors}
+\Hypertarget{class_device_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81}\index{Device@{Device}!Device@{Device}}
+\index{Device@{Device}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{Device()}{Device()}}
+{\footnotesize\ttfamily \label{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81} 
+Device::\+\+Device (\begin{DoxyParamCaption}\item[{string}]{id}{, }\item[{\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_device}{Device} with ID and type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier \\
+\hline
+{\em type} & Type tag (SENSOR or ACTUATOR) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_a5d43ac1b964e8ad1c1c0a423ba6daf81_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_a9dabc419c8d8df3a686c33ce042bc99a}\index{Device@{Device}!````~Device@{\texorpdfstring{$\sim$}{\string~}Device}}
+\index{````~Device@{\texorpdfstring{$\sim$}{\string~}Device}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Device()}{\string~Device()}}
+{\footnotesize\ttfamily \label{class_device_a9dabc419c8d8df3a686c33ce042bc99a} 
+Device::\+\texorpdfstring{$\sim$}{\string~}\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor (does nothing). 
+
+\doxylink{class_device}{Device} destructor (does nothing). 
+
+\label{class_device_doc-func-members}
+\Hypertarget{class_device_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_device_a9a032153593e74d6916dc7c09a9cafbb}\index{Device@{Device}!getID@{getID}}
+\index{getID@{getID}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{class_device_a9a032153593e74d6916dc7c09a9cafbb} 
+string Device::\+get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the device ID. 
+
+\begin{DoxyReturn}{Returns}
+ID string 
+\end{DoxyReturn}
+\Hypertarget{class_device_ad1889e61913a6816b9783894c3f46bfb}\index{Device@{Device}!getType@{getType}}
+\index{getType@{getType}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_device_ad1889e61913a6816b9783894c3f46bfb} 
+\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} Device::\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the device type tag. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type} enum value 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_device_ad1889e61913a6816b9783894c3f46bfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_a6b2f2b45d71f1ecda445896e0429e22c}\index{Device@{Device}!isActive@{isActive}}
+\index{isActive@{isActive}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{class_device_a6b2f2b45d71f1ecda445896e0429e22c} 
+bool Device::\+is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns whether the device is active. 
+
+\begin{DoxyReturn}{Returns}
+true if active, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_device_aacf5bdd68e49994907b79f362e6c9245}\index{Device@{Device}!operator==@{operator==}}
+\index{operator==@{operator==}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_device_aacf5bdd68e49994907b79f362e6c9245} 
+bool Device::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_device}{Device}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Compares devices by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \doxylink{class_device}{Device} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if IDs match, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_device_aacf5bdd68e49994907b79f362e6c9245_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_af771e75cb32cbc38ae8f3dd73a2995d0}\index{Device@{Device}!print@{print}}
+\index{print@{print}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_device_af771e75cb32cbc38ae8f3dd73a2995d0} 
+void Device::\+print (\begin{DoxyParamCaption}\item[{ostream \&}]{out}{}\end{DoxyParamCaption}) const}
+
+
+
+Prints ID, type, and active status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{class_device_af771e75cb32cbc38ae8f3dd73a2995d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_af6456cd57ee231fc23b894096ba93e19}\index{Device@{Device}!setActive@{setActive}}
+\index{setActive@{setActive}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily \label{class_device_af6456cd57ee231fc23b894096ba93e19} 
+void Device::\+set\+Active (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Sets the active state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & true to activate, false to deactivate \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_device_doc-variable-members}
+\Hypertarget{class_device_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_device_ac6c8534a9c755b5ee9affc37771a301d}\index{Device@{Device}!active@{active}}
+\index{active@{active}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily \label{class_device_ac6c8534a9c755b5ee9affc37771a301d} 
+bool Device::\+active\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Whether the device is currently active. 
+
+\Hypertarget{class_device_a157555eda7bcf277b286458011604dd7}\index{Device@{Device}!id@{id}}
+\index{id@{id}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_device_a157555eda7bcf277b286458011604dd7} 
+string Device::\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unique identifier for the device. 
+
+\Hypertarget{class_device_a7fc5d16455b81b1f20fe14725ee1d704}\index{Device@{Device}!type@{type}}
+\index{type@{type}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{class_device_a7fc5d16455b81b1f20fe14725ee1d704} 
+\doxymbox{\hyperlink{_device_manager_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} Device::\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Type tag: SENSOR or ACTUATOR. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_device_manager_8h}{Device\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_device_manager_8cpp}{Device\+Manager.\+cpp}}\end{DoxyCompactItemize}

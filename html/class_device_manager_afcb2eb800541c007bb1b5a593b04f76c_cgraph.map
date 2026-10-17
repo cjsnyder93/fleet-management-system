@@ -1,0 +1,5 @@
+<map id="DeviceManager::DeviceManager" name="DeviceManager::DeviceManager">
+<area shape="rect" id="Node000001" title="Copy constructor (shallow copy)." alt="" coords="5,5,217,32"/>
+<area shape="rect" id="Node000002" href="$class_device_manager.html#ae744719d7e77d792f9bb0c6d6b47ca69" title="Constructs a DeviceManager with fixed capacity." alt="" coords="265,5,476,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,16,252,19,246,19,217,21"/>
+</map>

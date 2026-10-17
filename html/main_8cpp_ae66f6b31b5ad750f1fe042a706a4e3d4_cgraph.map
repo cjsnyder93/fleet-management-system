@@ -1,0 +1,27 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="12,233,61,260"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="9,234,3,225,6,215,18,209,36,207,57,210,69,218,64,220,55,215,36,212,19,214,10,219,8,225,14,233"/>
+<area shape="rect" id="Node000002" href="$class_actuator.html#a7272cffc26026c1ac91696d746f651f0" title="Constructs an Actuator." alt="" coords="137,5,264,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,233,40,195,51,144,72,90,88,64,107,42,124,32,121,36,111,46,92,67,77,92,56,145,45,196,41,233"/>
+<area shape="rect" id="Node000004" href="$class_device_manager.html#ac4ec66d2b858c50f5b83b50ac9917cdc" title="Adds a device if capacity allows." alt="" coords="109,56,291,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="38,232,45,203,58,166,78,126,107,93,116,88,113,93,111,97,83,129,63,168,50,205,43,234"/>
+<area shape="rect" id="Node000005" href="$class_device_manager.html#ae2945426af19d4315c033756e052f148" title="Returns number of stored devices." alt="" coords="114,107,287,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="41,232,66,188,85,164,107,143,118,138,115,143,111,147,89,167,70,191,46,234"/>
+<area shape="rect" id="Node000006" href="$class_device_manager.html#a753cdd4f555a9b7238f814a99dab166f" title="Returns device pointer at index." alt="" coords="111,157,290,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="52,231,77,212,108,194,126,188,123,191,110,198,80,216,56,234"/>
+<area shape="rect" id="Node000007" href="$class_actuator.html#a2d81d034c15685b052085b7a222cece5" title="Returns the current output level." alt="" coords="133,208,268,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="60,241,119,232,116,236,63,245"/>
+<area shape="rect" id="Node000008" href="$class_device.html#ad1889e61913a6816b9783894c3f46bfb" title="Returns the device type tag." alt="" coords="142,259,258,285"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="61,248,128,259,124,262,62,253"/>
+<area shape="rect" id="Node000009" href="$class_sensor.html#a40a87102f936e37d1bb68b72be612b45" title="Checks if reading exceeds threshold." alt="" coords="118,309,283,336"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="53,258,80,277,110,295,127,303,122,305,108,300,77,282,54,263"/>
+<area shape="rect" id="Node000010" href="$class_sensor.html#a4ab188af9a1ee8993264fdbc658d393e" title="Constructs a Sensor." alt="" coords="145,360,256,387"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="44,258,70,302,89,326,111,346,132,358,127,360,108,350,85,330,66,305,44,263"/>
+<area shape="rect" id="Node000011" href="$class_actuator.html#a8ba8665604eee38fe227fa765c5b1a1e" title="Sets the output level (clamped to maxOutput)." alt="" coords="133,411,268,437"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="40,258,50,288,63,326,83,364,111,397,121,405,116,406,107,401,78,367,58,328,45,290,40,263"/>
+<area shape="rect" id="Node000012" href="$class_sensor.html#a71380b19f5d24a8e136e903fd96e3a6d" title="Sets the current reading." alt="" coords="132,461,268,488"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="39,258,45,297,56,348,77,401,92,426,111,447,121,457,116,456,107,451,88,429,72,404,51,349,40,298,38,263"/>
+<area shape="rect" id="Node000003" href="$class_device.html#a5d43ac1b964e8ad1c1c0a423ba6daf81" title="Constructs a Device with ID and type." alt="" coords="339,183,451,209"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,28,293,42,324,70,350,104,385,168,380,168,346,107,320,74,290,46,265,33"/>
+<area shape="poly" id="edge11_Node000010_Node000003" title=" " alt="" coords="255,362,290,346,320,318,346,285,380,225,384,222,350,288,324,322,293,350,257,367"/>
+</map>

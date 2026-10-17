@@ -1,0 +1,5 @@
+<map id="Actuator::Actuator" name="Actuator::Actuator">
+<area shape="rect" id="Node000001" title="Constructs an Actuator." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="Node000002" href="$class_device.html#a5d43ac1b964e8ad1c1c0a423ba6daf81" title="Constructs a Device with ID and type." alt="" coords="181,5,292,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,168,18,163,19,133,21"/>
+</map>

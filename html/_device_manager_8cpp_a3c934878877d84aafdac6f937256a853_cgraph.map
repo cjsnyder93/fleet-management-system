@@ -1,0 +1,6 @@
+<map id="operator&lt;&lt;" name="operator&lt;&lt;">
+<area shape="rect" id="Node000001" title="Stream output operator for Device." alt="" coords="5,29,90,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="23,29,19,21,22,11,32,5,48,3,64,5,75,14,69,14,62,10,47,8,34,10,26,14,24,20,28,29"/>
+<area shape="rect" id="Node000002" href="$class_device.html#af771e75cb32cbc38ae8f3dd73a2995d0" title="Prints ID, type, and active status." alt="" coords="138,29,233,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="90,40,125,42,120,43,90,45"/>
+</map>

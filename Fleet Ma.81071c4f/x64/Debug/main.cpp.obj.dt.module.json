@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Fleet Ma.81071c4f\\x64\\Debug\\main.obj",
+            "outputs": [
+                "Fleet Ma.81071c4f\\x64\\Debug\\main.cpp.obj.dt.module.json",
+                "Fleet Ma.81071c4f\\x64\\Debug\\main.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

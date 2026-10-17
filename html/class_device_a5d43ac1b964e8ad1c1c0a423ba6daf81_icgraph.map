@@ -1,0 +1,15 @@
+<map id="Device::Device" name="Device::Device">
+<area shape="rect" id="Node000001" title="Constructs a Device with ID and type." alt="" coords="376,56,487,83"/>
+<area shape="rect" id="Node000002" href="$class_actuator.html#a7272cffc26026c1ac91696d746f651f0" title="Constructs an Actuator." alt="" coords="198,5,325,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="367,51,309,35,309,30,372,51"/>
+<area shape="rect" id="Node000005" href="$class_device.html#aacf5bdd68e49994907b79f362e6c9245" title="Compares devices by ID." alt="" coords="195,56,328,83"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="358,70,328,72,328,67,363,69"/>
+<area shape="rect" id="Node000006" href="$class_sensor.html#a4ab188af9a1ee8993264fdbc658d393e" title="Constructs a Sensor." alt="" coords="206,107,317,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="372,87,309,109,308,103,367,88"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="51,93,101,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,39,196,46,102,95,100,90,194,42,210,37"/>
+<area shape="rect" id="Node000004" href="$class_actuator.html#ae1cee4237d861d187c2bb33a79f680a4" title="Adds delta to outputLevel (clamped to maxOutput)." alt="" coords="5,5,147,32"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="180,20,148,21,147,16,185,18"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="108,84,107,80,102,76,76,72,55,74,45,80,45,86,54,96,48,97,39,88,41,77,54,69,76,67,104,71,111,77,113,86"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="188,116,101,111,101,106,192,113"/>
+</map>
